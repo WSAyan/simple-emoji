@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:paddingTop="64dp"
+    >
+
+    <ImageView
+        android:id="@+id/emoji_btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/smiley"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:padding="4dp"
+        />
+
+    <ImageView
+        android:id="@+id/submit_btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:padding="4dp"
+        android:src="@android:drawable/ic_menu_send"
+        />
+
+    <com.wsayan.simple_emoji.ui.EmojiconEditText
+        android:id="@+id/emojicon_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/submit_btn"
+        android:layout_toRightOf="@id/emoji_btn"
+        android:imeOptions="actionSend"
+        android:inputType="text"
+        emojicon:emojiconSize="28sp"/>
+
+
+    <com.wsayan.simple_emoji.ui.EmojiconEditText
+        android:id="@+id/emojicon_edit_text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/emojicon_edit_text"
+        android:imeOptions="actionSend"
+        android:inputType="text"
+        emojicon:emojiconSize="28sp"/>
+
+
+    <CheckBox
+        android:id="@+id/use_system_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:checked="false"
+        android:text="Use System Default?"/>
+
+    <com.wsayan.simple_emoji.ui.EmojiconTextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="26dp"
+        android:lineSpacingExtra="17sp"
+        android:text="Hello Emojis !"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#000000"
+        emojicon:emojiconAlignment="bottom"/>
+</RelativeLayout>

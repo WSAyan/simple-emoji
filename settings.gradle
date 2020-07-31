@@ -1,0 +1,2 @@
+include ':sample', ':simpleemoji'
+rootProject.name = "simple-emoji"
